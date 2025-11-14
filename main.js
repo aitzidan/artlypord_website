@@ -200,21 +200,29 @@ document.addEventListener("DOMContentLoaded", () => {
 		const container = document.getElementById("locations-container");
 		if (!container) return;
 		container.innerHTML = "";
-		Object.keys(getTranslation("locationsData")).forEach((key, index) => {
-			const location = getTranslation(`locationsData.${key}`);
+
+		// Use English data keys to ensure consistency across languages
+		Object.keys(translations.en.locationsData).forEach((key, index) => {
+			const locationEN = translations.en.locationsData[key];
+			const locationCurrent = getTranslation(`locationsData.${key}`);
+
+			if (!locationCurrent) return; // Skip if translation missing
+
 			const card = document.createElement("div");
 			card.className = "location-card-item scroll-animate animate-in";
-			card.style.setProperty("--delay", `${(index % 3) * 0.1}s`);
-			card.dataset.tags = location.tags.join(",");
+			card.style.setProperty("--delay", `${(index % 3) * 0.05}s`);
+
+			// Use stable, lowercase English tags for filtering
+			card.dataset.tags = locationEN.tags.map((t) => t.toLowerCase()).join(",");
+
 			card.innerHTML = `
-                <div class="location-card">
-                    <img src="https://picsum.photos/seed/${key}/600/400" alt="${location.name}">
-                    <div class="location-card-content">
-                        <h3>${location.name}</h3>
-                        <div class="location-card-tags">
-                            ${location.tags.map((tag) => `<span class="tag tag-green">${tag}</span>`).join("")}
+                <div class="location-card-v2">
+                    <img src="https://picsum.photos/seed/${key}/600/400" alt="${locationCurrent.name}">
+                    <div class="location-card-overlay">
+                        <div class="location-card-text">
+                            <h3>${locationCurrent.name}</h3>
+                            <p>${locationCurrent.description}</p>
                         </div>
-                        <p>${location.description}</p>
                     </div>
                 </div>
             `;
@@ -225,15 +233,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	const initLocationFilter = () => {
 		const filterButtons = document.querySelectorAll(".filter-btn");
+
 		filterButtons.forEach((button) => {
 			button.addEventListener("click", () => {
-				const filter = button.dataset.filter;
+				const filter = button.dataset.filter.toLowerCase();
 
 				filterButtons.forEach((btn) => btn.classList.remove("active"));
 				button.classList.add("active");
 
 				document.querySelectorAll(".location-card-item").forEach((card) => {
-					if (filter === "All" || card.dataset.tags.includes(filter)) {
+					if (filter === "all" || card.dataset.tags.includes(filter)) {
 						card.style.display = "block";
 					} else {
 						card.style.display = "none";

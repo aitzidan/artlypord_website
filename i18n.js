@@ -237,6 +237,44 @@ const translations = {
 			},
 			fes: { name: "Fès", description: "Capitale spirituelle et culturelle du Maroc, abritant la plus ancienne médina du monde.", tags: ["Ville", "Médina"] },
 			tinghir: { name: "Tinghir", description: "Une oasis luxuriante encadrée par des falaises spectaculaires et les célèbres Gorges du Todra.", tags: ["Montagne", "Oasis"] },
+			agadir: {
+				name: "Agadir",
+				description: "Une ville côtière moderne avec de vastes plages et une lumière exceptionnelle, idéale pour des scènes contemporaines et balnéaires.",
+				tags: ["Côte", "Ville"],
+			},
+			casablanca: {
+				name: "Casablanca",
+				description: "Le cœur économique du Maroc, offrant une architecture art déco, des paysages urbains modernes et une médina historique.",
+				tags: ["Ville", "Côte"],
+			},
+			tetouan: {
+				name: "Tétouan",
+				description: "Surnommée 'la colombe blanche', sa médina classée au patrimoine mondial de l'UNESCO offre des décors andalous authentiques.",
+				tags: ["Ville", "Médina"],
+			},
+			ifrane: {
+				name: "Ifrane",
+				description: "Une ville de montagne surprenante avec une architecture de style alpin, des forêts de cèdres et de la neige en hiver.",
+				tags: ["Montagne", "Ville"],
+			},
+			dakhla: { name: "Dakhla", description: "Un paysage surréaliste où le désert rencontre l'océan, célèbre pour ses lagons bleus et ses dunes de sable blanc.", tags: ["Désert", "Côte"] },
+			tafraoute: {
+				name: "Tafraoute",
+				description: "Niché dans les montagnes de l'Anti-Atlas, célèbre pour ses formations rocheuses de granit rose et ses paysages lunaires.",
+				tags: ["Montagne"],
+			},
+			zagora: {
+				name: "Zagora",
+				description: "La porte d'entrée du désert du Sahara, offrant des oasis luxuriantes, des kasbahs anciennes et des paysages désertiques spectaculaires.",
+				tags: ["Désert", "Oasis"],
+			},
+			el_jadida: { name: "El Jadida", description: "Une ville portuaire fortifiée avec une citerne portugaise unique et une atmosphère côtière authentique.", tags: ["Côte", "Ville"] },
+			meknes: { name: "Meknès", description: "Une ville impériale avec des remparts monumentaux, des portes grandioses et une riche histoire royale.", tags: ["Ville", "Médina"] },
+			taghazout: {
+				name: "Taghazout",
+				description: "Un village de pêcheurs bohème devenu un spot de surf de renommée mondiale, avec des falaises escarpées et des vagues parfaites.",
+				tags: ["Côte"],
+			},
 		},
 		blogData: {
 			1: {
@@ -474,6 +512,16 @@ const translations = {
 			tangier: { name: "Tangier", description: "A legendary city at the crossroads of Africa and Europe, with a cosmopolitan history and colonial architecture.", tags: ["City", "Coast"] },
 			fes: { name: "Fès", description: "Morocco's spiritual and cultural capital, home to the world's oldest medina.", tags: ["City", "Medina"] },
 			tinghir: { name: "Tinghir", description: "A lush oasis city framed by dramatic cliffs and the famous Todra Gorge.", tags: ["Mountain", "Oasis"] },
+			agadir: { name: "Agadir", description: "A modern coastal city with vast beaches and exceptional light, ideal for contemporary and seaside scenes.", tags: ["Coast", "City"] },
+			casablanca: { name: "Casablanca", description: "The economic heart of Morocco, offering Art Deco architecture, modern cityscapes, and a historic medina.", tags: ["City", "Coast"] },
+			tetouan: { name: "Tétouan", description: "Nicknamed 'the white dove,' its UNESCO-listed medina provides authentic Andalusian settings.", tags: ["City", "Medina"] },
+			ifrane: { name: "Ifrane", description: "A surprising mountain town with alpine-style architecture, cedar forests, and snow in winter.", tags: ["Mountain", "City"] },
+			dakhla: { name: "Dakhla", description: "A surreal landscape where the desert meets the ocean, famous for its blue lagoons and white sand dunes.", tags: ["Desert", "Coast"] },
+			tafraoute: { name: "Tafraoute", description: "Nestled in the Anti-Atlas mountains, famous for its pink granite rock formations and lunar landscapes.", tags: ["Mountain"] },
+			zagora: { name: "Zagora", description: "The gateway to the Sahara Desert, offering lush oases, ancient kasbahs, and dramatic desert scenery.", tags: ["Desert", "Oasis"] },
+			el_jadida: { name: "El Jadida", description: "A fortified port city with a unique Portuguese cistern and an authentic coastal atmosphere.", tags: ["Coast", "City"] },
+			meknes: { name: "Meknes", description: "An imperial city with monumental ramparts, grand gates, and a rich royal history.", tags: ["City", "Medina"] },
+			taghazout: { name: "Taghazout", description: "A bohemian fishing village turned world-class surf spot, with rugged cliffs and perfect waves.", tags: ["Coast"] },
 		},
 		blogData: {
 			1: {
