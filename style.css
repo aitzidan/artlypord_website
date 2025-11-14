@@ -193,10 +193,16 @@ img {
 	justify-content: space-between;
 	align-items: center;
 }
+
+/* GLOBAL: header logo color */
 .logo {
 	font-size: 1.75rem;
 	font-weight: 700;
-	color: var(--color-primary);
+	color: var(--color-primary-2);
+	transition: color 0.3s ease;
+}
+.logo:hover {
+	color: #c73a3e;
 }
 .logo span {
 	color: white;
@@ -354,9 +360,7 @@ body.mobile-nav-open .mobile-nav {
 	position: absolute;
 	inset: 0;
 	background: url("https://picsum.photos/seed/morocco-film/1920/1080") no-repeat center center/cover;
-	/* HOME: Hero Animation START */
 	animation: hero-zoom-in 20s ease-out forwards;
-	/* HOME: Hero Animation END */
 }
 .hero-bg::after {
 	content: "";
@@ -393,16 +397,39 @@ body.mobile-nav-open .mobile-nav {
 	background-color: var(--color-primary);
 	margin: 1rem auto 0;
 }
-.why-us-card {
-	background: var(--color-dark);
-	padding: 2rem;
-	border-radius: 0.5rem;
-	text-align: center;
-	height: 100%;
+/* ACCUEIL: Why ARTLY PRODUCTION section */
+.why-artly-section {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	align-items: center;
+	gap: 3rem;
 }
-.why-us-card p {
-	color: var(--color-text);
-	font-weight: 500;
+.why-artly-content h3 {
+	font-size: 1.1rem;
+	margin-bottom: 0.5rem;
+	color: white;
+}
+.why-artly-list {
+	list-style: none;
+	padding-left: 0;
+	margin-top: 2rem;
+}
+.why-artly-list li {
+	display: flex;
+	align-items: flex-start;
+	margin-bottom: 1.5rem;
+}
+.why-artly-list li svg {
+	flex-shrink: 0;
+	width: 24px;
+	height: 24px;
+	color: var(--color-primary);
+	margin-right: 1rem;
+	margin-top: 0.2rem;
+}
+.why-artly-image img {
+	border-radius: 0.5rem;
+	box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
 
 /* HOME: "Our Work" Teaser Section START */
@@ -412,7 +439,6 @@ body.mobile-nav-open .mobile-nav {
 	font-size: 1.1rem;
 	color: var(--color-text-muted);
 }
-
 .work-teaser-card {
 	display: block;
 	position: relative;
@@ -421,19 +447,16 @@ body.mobile-nav-open .mobile-nav {
 	box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
 	background-color: var(--color-dark);
 }
-
 .work-teaser-card img {
 	width: 100%;
 	height: 250px;
 	object-fit: cover;
 	transition: transform 0.4s ease, opacity 0.4s ease;
 }
-
 .work-teaser-card:hover img {
 	transform: scale(1.05);
 	opacity: 0.8;
 }
-
 .work-teaser-overlay {
 	position: absolute;
 	bottom: 0;
@@ -443,12 +466,10 @@ body.mobile-nav-open .mobile-nav {
 	color: white;
 	background: linear-gradient(to top, rgba(17, 24, 39, 0.8), transparent);
 }
-
 .work-teaser-overlay h3 {
 	transform: translateY(calc(100% + 1.5rem));
 	transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
-
 .work-teaser-card:hover .work-teaser-overlay h3 {
 	transform: translateY(0);
 }
@@ -476,19 +497,16 @@ body.mobile-nav-open .mobile-nav {
 	box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
 	aspect-ratio: 1 / 1;
 }
-
 .team-card-professional img {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
 	transition: transform 0.4s ease, filter 0.4s ease;
 }
-
 .team-card-professional:hover img {
 	transform: scale(1.05);
 	filter: blur(4px) brightness(0.6);
 }
-
 .team-card-overlay {
 	position: absolute;
 	inset: 0;
@@ -500,28 +518,24 @@ body.mobile-nav-open .mobile-nav {
 	background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent 40%);
 	text-align: left;
 }
-
 .team-card-info {
 	transition: transform 0.4s ease;
 }
 .team-card-professional:hover .team-card-info {
 	transform: translateY(-1rem);
 }
-
 .team-member-name {
 	font-size: 1.25rem;
 	font-weight: 700;
 	margin: 0;
 	color: white;
 }
-
 .team-member-role {
 	font-size: 0.9rem;
 	color: var(--color-primary);
 	margin: 0.25rem 0 0 0;
 	font-weight: 500;
 }
-
 .team-member-description {
 	font-size: 0.85rem;
 	color: var(--color-text);
@@ -533,7 +547,6 @@ body.mobile-nav-open .mobile-nav {
 	line-height: 1.4;
 	padding: 0;
 }
-
 .team-card-professional:hover .team-member-description {
 	opacity: 1;
 	transform: translateY(0);
@@ -760,23 +773,34 @@ body.mobile-nav-open .mobile-nav {
 	font-weight: 500;
 	cursor: pointer;
 	text-align: left;
+	transition: color 0.3s ease;
 }
+/* FILMING GUIDE: Accordion animation & active title color */
 .faq-question svg {
 	transition: transform 0.3s ease;
+}
+.faq-item.is-open .faq-question {
+	color: var(--color-primary);
 }
 .faq-item.is-open .faq-question svg {
 	transform: rotate(180deg);
 }
 .faq-answer {
 	max-height: 0;
+	opacity: 0;
 	overflow: hidden;
-	transition: max-height 0.3s ease, padding 0.3s ease;
+	transition: max-height 0.4s ease-out, opacity 0.4s ease-out;
 }
 .faq-answer p {
-	padding: 0 1.5rem 1rem;
+	padding: 0 1.5rem;
+	margin: 0;
 }
 .faq-item.is-open .faq-answer {
-	max-height: 200px;
+	max-height: 300px;
+	opacity: 1;
+}
+.faq-item.is-open .faq-answer p {
+	padding-bottom: 1.5rem;
 }
 
 /* --- Locations Page --- */
@@ -807,32 +831,38 @@ body.mobile-nav-open .mobile-nav {
 	color: var(--color-dark);
 }
 
-/* LOCATIONS: New Card Styles START */
-.locations-grid #locations-container.grid-3 {
+/* LOCATIONS: Grid hover expansion */
+#locations-container {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	grid-auto-rows: 250px;
 	gap: 1.5rem;
 }
-
-.location-card-v2 {
+.location-card-item {
 	position: relative;
-	overflow: hidden;
 	border-radius: 0.5rem;
-	box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-	aspect-ratio: 4 / 3;
-	background-color: var(--color-dark);
-	cursor: pointer;
+	overflow: hidden; /* Fixes overlay corners */
+	transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0.4s ease, filter 0.4s ease;
 }
-
+/* New style for sibling cards when one is expanded */
+#locations-container.has-expanded-child .location-card-item:not(.expanded) {
+	opacity: 0.6;
+	transform: scale(0.98);
+	filter: blur(1px);
+}
+.location-card-v2 {
+	height: 100%;
+	width: 100%;
+}
 .location-card-v2 img {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
 	transition: transform 0.4s ease-in-out;
 }
-
 .location-card-v2:hover img {
 	transform: scale(1.05);
 }
-
 .location-card-overlay {
 	position: absolute;
 	inset: 0;
@@ -841,41 +871,35 @@ body.mobile-nav-open .mobile-nav {
 	justify-content: center;
 	text-align: center;
 	padding: 1.5rem;
-	background: linear-gradient(to top, rgba(5, 110, 99, 0.85), rgba(17, 24, 39, 0.5) 70%);
+	background: linear-gradient(to top, rgba(169, 30, 34, 0.85), rgba(17, 24, 39, 0.5) 70%);
 	opacity: 0;
 	transition: opacity 0.4s ease-in-out;
 }
-
 .location-card-v2:hover .location-card-overlay {
 	opacity: 1;
 }
-
 .location-card-text {
 	color: white;
 	transform: translateY(15px);
 	opacity: 0;
 	transition: transform 0.4s ease-in-out 0.1s, opacity 0.4s ease-in-out 0.1s;
 }
-
 .location-card-v2:hover .location-card-text {
 	transform: translateY(0);
 	opacity: 1;
 }
-
 .location-card-text h3 {
 	font-size: 1.5rem;
 	margin-bottom: 0.5rem;
 	text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
 	color: white;
 }
-
 .location-card-text p {
 	font-size: 0.9rem;
 	color: var(--color-text);
 	margin: 0;
 	line-height: 1.5;
 }
-/* LOCATIONS: New Card Styles END */
 
 /* --- Blog Page --- */
 .blog-card {
@@ -888,13 +912,11 @@ body.mobile-nav-open .mobile-nav {
 	box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -2px rgba(0, 0, 0, 0.2);
 	transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
-
 .blog-card:hover {
 	transform: translateY(-5px);
 	box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -4px rgba(0, 0, 0, 0.3);
 	border-bottom-color: var(--color-primary);
 }
-
 .blog-card-image {
 	overflow: hidden;
 }
@@ -935,11 +957,10 @@ body.mobile-nav-open .mobile-nav {
 	font-size: 0.9rem;
 }
 .blog-card.is-open .blog-card-full-text {
-	max-height: 1000px; /* Large enough to not clip content */
+	max-height: 1000px;
 	opacity: 1;
 	margin-top: 1rem;
 }
-
 .blog-card-readmore {
 	align-self: flex-start;
 	margin-top: 1rem;
@@ -1087,6 +1108,12 @@ body.mobile-nav-open .mobile-nav {
 	.grid-2-contact {
 		grid-template-columns: 1fr;
 	}
+	.why-artly-section {
+		grid-template-columns: 1fr;
+	}
+	.why-artly-image {
+		margin-top: 2rem;
+	}
 	.contact-info-wrapper {
 		margin-top: 3rem;
 	}
@@ -1104,6 +1131,17 @@ body.mobile-nav-open .mobile-nav {
 	}
 	.mobile-nav {
 		display: none !important;
+	}
+
+	/* LOCATIONS: Expanded card on hover */
+	.location-card-item.expanded {
+		grid-column: span 2;
+		grid-row: span 2;
+		z-index: 10;
+		box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+		opacity: 1;
+		transform: scale(1);
+		filter: blur(0);
 	}
 }
 @media (max-width: 768px) {

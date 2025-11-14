@@ -179,16 +179,15 @@ document.addEventListener("DOMContentLoaded", () => {
 		initFaqAccordion();
 	};
 
+	// JS: Filming guide accordion animation
 	const initFaqAccordion = () => {
 		document.querySelectorAll(".faq-question").forEach((button) => {
 			button.addEventListener("click", () => {
 				const item = button.parentElement;
 				const wasOpen = item.classList.contains("is-open");
 
-				// Close all items
 				document.querySelectorAll(".faq-item").forEach((i) => i.classList.remove("is-open"));
 
-				// If it wasn't open, open it
 				if (!wasOpen) {
 					item.classList.add("is-open");
 				}
@@ -201,18 +200,16 @@ document.addEventListener("DOMContentLoaded", () => {
 		if (!container) return;
 		container.innerHTML = "";
 
-		// Use English data keys to ensure consistency across languages
 		Object.keys(translations.en.locationsData).forEach((key, index) => {
 			const locationEN = translations.en.locationsData[key];
 			const locationCurrent = getTranslation(`locationsData.${key}`);
 
-			if (!locationCurrent) return; // Skip if translation missing
+			if (!locationCurrent) return;
 
 			const card = document.createElement("div");
 			card.className = "location-card-item scroll-animate animate-in";
 			card.style.setProperty("--delay", `${(index % 3) * 0.05}s`);
 
-			// Use stable, lowercase English tags for filtering
 			card.dataset.tags = locationEN.tags.map((t) => t.toLowerCase()).join(",");
 
 			card.innerHTML = `
@@ -249,6 +246,39 @@ document.addEventListener("DOMContentLoaded", () => {
 					}
 				});
 			});
+		});
+	};
+
+	// JS: Locations grid hover expansion
+	const initLocationHoverExpand = () => {
+		const container = document.getElementById("locations-container");
+		if (!container) return;
+
+		container.addEventListener("mouseleave", () => {
+			if (window.matchMedia("(max-width: 992px)").matches) return;
+
+			const expandedCard = container.querySelector(".location-card-item.expanded");
+			if (expandedCard) {
+				expandedCard.classList.remove("expanded");
+			}
+			container.classList.remove("has-expanded-child");
+		});
+
+		container.addEventListener("mouseover", (e) => {
+			if (window.matchMedia("(max-width: 992px)").matches) return;
+
+			const card = e.target.closest(".location-card-item");
+			if (!card || card.classList.contains("expanded")) {
+				return;
+			}
+
+			const previouslyExpanded = container.querySelector(".location-card-item.expanded");
+			if (previouslyExpanded) {
+				previouslyExpanded.classList.remove("expanded");
+			}
+
+			card.classList.add("expanded");
+			container.classList.add("has-expanded-child");
 		});
 	};
 
@@ -352,6 +382,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	if (bodyId === "page-locations") {
 		populateLocations();
 		initLocationFilter();
+		initLocationHoverExpand();
 	}
 	if (bodyId === "page-blog") populateBlog();
 	if (bodyId === "page-contact") initContactForm();
