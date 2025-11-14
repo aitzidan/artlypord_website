@@ -1,160 +1,231 @@
 <!DOCTYPE html>
 <html lang="fr" data-lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services - Artly Production</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-</head>
-<body id="page-services">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Services - Artly Production</title>
+		<link rel="stylesheet" href="style.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+	</head>
+	<body id="page-services">
+		<header class="header sticky-header">
+			<div class="container header-container">
+				<a href="index.html" class="logo">ARTLY <span>PRODUCTION</span></a>
+				<nav class="main-nav">
+					<a href="index.html" class="nav-link" data-i18n="nav.home">Accueil</a>
+					<a href="services.html" class="nav-link" data-i18n="nav.services">Services</a>
+					<a href="portfolio.html" class="nav-link" data-i18n="nav.portfolio">Portfolio</a>
+					<a href="filming-guide.html" class="nav-link" data-i18n="nav.filming_guide">Guide de tournage</a>
+					<a href="locations.html" class="nav-link" data-i18n="nav.locations">Lieux</a>
+					<a href="blog.html" class="nav-link" data-i18n="nav.blog">Blog</a>
+					<a href="contact.html" class="nav-link" data-i18n="nav.contact">Contact</a>
+				</nav>
+				<div class="header-actions">
+					<div class="lang-switcher">
+						<button class="lang-btn" data-lang="fr">FR</button>
+						<span>|</span>
+						<button class="lang-btn" data-lang="en">EN</button>
+					</div>
+					<button id="mobile-nav-toggle" class="mobile-nav-toggle" aria-label="Toggle navigation">
+						<svg
+							class="icon-menu"
+							xmlns="http://www.w3.org/2000/svg"
+							width="24"
+							height="24"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						>
+							<line x1="3" y1="12" x2="21" y2="12"></line>
+							<line x1="3" y1="6" x2="21" y2="6"></line>
+							<line x1="3" y1="18" x2="21" y2="18"></line>
+						</svg>
+						<svg
+							class="icon-close"
+							xmlns="http://www.w3.org/2000/svg"
+							width="24"
+							height="24"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						>
+							<line x1="18" y1="6" x2="6" y2="18"></line>
+							<line x1="6" y1="6" x2="18" y2="18"></line>
+						</svg>
+					</button>
+				</div>
+			</div>
+		</header>
 
-    <header class="header sticky-header">
-        <div class="container header-container">
-            <a href="index.html" class="logo">ARTLY <span>PRODUCTION</span></a>
-            <nav class="main-nav">
-                <a href="index.html" class="nav-link" data-i18n="nav.home">Accueil</a>
-                <a href="services.html" class="nav-link" data-i18n="nav.services">Services</a>
-                <a href="portfolio.html" class="nav-link" data-i18n="nav.portfolio">Portfolio</a>
-                <a href="filming-guide.html" class="nav-link" data-i18n="nav.filming_guide">Guide de tournage</a>
-                <a href="locations.html" class="nav-link" data-i18n="nav.locations">Lieux</a>
-                <a href="blog.html" class="nav-link" data-i18n="nav.blog">Blog</a>
-                <a href="contact.html" class="nav-link" data-i18n="nav.contact">Contact</a>
-            </nav>
-            <div class="header-actions">
-                <div class="lang-switcher">
-                    <button class="lang-btn" data-lang="fr">FR</button>
-                    <span>|</span>
-                    <button class="lang-btn" data-lang="en">EN</button>
-                </div>
-                <button id="mobile-nav-toggle" class="mobile-nav-toggle" aria-label="Toggle navigation">
-                    <svg class="icon-menu" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
-                    <svg class="icon-close" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-                </button>
-            </div>
-        </div>
-    </header>
+		<main>
+			<section class="page-header">
+				<div class="container text-center scroll-animate animate-in">
+					<h1 data-i18n="servicesPage.title">Nos Services</h1>
+					<p data-i18n="servicesPage.subtitle">Avec ARTLY PRODUCTION, vous gagnez un partenaire fiable, créatif et plein de ressources, ancré au Maroc et connecté au monde.</p>
+				</div>
+			</section>
 
-    <main>
-        <section class="page-header">
-            <div class="container text-center scroll-animate animate-in">
-                <h1 data-i18n="servicesPage.title">Nos Services</h1>
-                <p data-i18n="servicesPage.subtitle">Avec ARTLY PRODUCTION, vous gagnez un partenaire fiable, créatif et plein de ressources, ancré au Maroc et connecté au monde.</p>
-            </div>
-        </section>
+			<section class="services-grid section-padding">
+				<div class="container">
+					<div class="grid grid-3">
+						<div class="scroll-animate animate-in" style="--delay: 0s">
+							<div class="service-card">
+								<img src="https://picsum.photos/seed/locations/600/400" alt="Repérage de lieux" />
+								<div class="service-card-content">
+									<h3 data-i18n="servicesData.location-scouting.title">Repérage de lieux</h3>
+									<p data-i18n="servicesData.location-scouting.description">Nous trouvons les lieux parfaits...</p>
+								</div>
+							</div>
+						</div>
+						<div class="scroll-animate animate-in" style="--delay: 0.1s">
+							<div class="service-card">
+								<img src="https://picsum.photos/seed/permits/600/400" alt="Assistance aux permis" />
+								<div class="service-card-content">
+									<h3 data-i18n="servicesData.permit-assistance.title">Assistance aux permis</h3>
+									<p data-i18n="servicesData.permit-assistance.description">Nous gérons toutes les demandes...</p>
+								</div>
+							</div>
+						</div>
+						<div class="scroll-animate animate-in" style="--delay: 0.2s">
+							<div class="service-card">
+								<img src="https://picsum.photos/seed/casting/600/400" alt="Équipe et Casting" />
+								<div class="service-card-content">
+									<h3 data-i18n="servicesData.crew-casting.title">Équipe et Casting</h3>
+									<p data-i18n="servicesData.crew-casting.description">Nous fournissons des équipes locales...</p>
+								</div>
+							</div>
+						</div>
+						<div class="scroll-animate animate-in" style="--delay: 0s">
+							<div class="service-card">
+								<img src="https://picsum.photos/seed/hospitality/600/400" alt="Hospitalité" />
+								<div class="service-card-content">
+									<h3 data-i18n="servicesData.hospitality.title">Hospitalité</h3>
+									<p data-i18n="servicesData.hospitality.description">Nous organisons le transport...</p>
+								</div>
+							</div>
+						</div>
+						<div class="scroll-animate animate-in" style="--delay: 0.1s">
+							<div class="service-card">
+								<img src="https://picsum.photos/seed/budget/600/400" alt="Découpage et Budgétisation" />
+								<div class="service-card-content">
+									<h3 data-i18n="servicesData.budgeting.title">Découpage et Budgétisation</h3>
+									<p data-i18n="servicesData.budgeting.description">Nous analysons les besoins...</p>
+								</div>
+							</div>
+						</div>
+						<div class="scroll-animate animate-in" style="--delay: 0.2s">
+							<div class="service-card">
+								<img src="https://picsum.photos/seed/equipment/600/400" alt="Location d'équipement" />
+								<div class="service-card-content">
+									<h3 data-i18n="servicesData.equipment-rental.title">Location d'équipement</h3>
+									<p data-i18n="servicesData.equipment-rental.description">Grâce à nos partenaires...</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
 
-        <section class="services-grid section-padding">
-            <div class="container">
-                <div class="grid grid-3">
-                    <div class="scroll-animate animate-in" style="--delay: 0.0s">
-                        <div class="service-card">
-                            <img src="https://picsum.photos/seed/locations/600/400" alt="Repérage de lieux">
-                            <div class="service-card-content">
-                                <h3 data-i18n="servicesData.location-scouting.title">Repérage de lieux</h3>
-                                <p data-i18n="servicesData.location-scouting.description">Nous trouvons les lieux parfaits...</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="scroll-animate animate-in" style="--delay: 0.1s">
-                        <div class="service-card">
-                            <img src="https://picsum.photos/seed/permits/600/400" alt="Assistance aux permis">
-                            <div class="service-card-content">
-                                <h3 data-i18n="servicesData.permit-assistance.title">Assistance aux permis</h3>
-                                <p data-i18n="servicesData.permit-assistance.description">Nous gérons toutes les demandes...</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="scroll-animate animate-in" style="--delay: 0.2s">
-                        <div class="service-card">
-                            <img src="https://picsum.photos/seed/casting/600/400" alt="Équipe et Casting">
-                            <div class="service-card-content">
-                                <h3 data-i18n="servicesData.crew-casting.title">Équipe et Casting</h3>
-                                <p data-i18n="servicesData.crew-casting.description">Nous fournissons des équipes locales...</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="scroll-animate animate-in" style="--delay: 0.0s">
-                        <div class="service-card">
-                            <img src="https://picsum.photos/seed/hospitality/600/400" alt="Hospitalité">
-                            <div class="service-card-content">
-                                <h3 data-i18n="servicesData.hospitality.title">Hospitalité</h3>
-                                <p data-i18n="servicesData.hospitality.description">Nous organisons le transport...</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="scroll-animate animate-in" style="--delay: 0.1s">
-                        <div class="service-card">
-                            <img src="https://picsum.photos/seed/budget/600/400" alt="Découpage et Budgétisation">
-                            <div class="service-card-content">
-                                <h3 data-i18n="servicesData.budgeting.title">Découpage et Budgétisation</h3>
-                                <p data-i18n="servicesData.budgeting.description">Nous analysons les besoins...</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="scroll-animate animate-in" style="--delay: 0.2s">
-                        <div class="service-card">
-                            <img src="https://picsum.photos/seed/equipment/600/400" alt="Location d'équipement">
-                            <div class="service-card-content">
-                                <h3 data-i18n="servicesData.equipment-rental.title">Location d'équipement</h3>
-                                <p data-i18n="servicesData.equipment-rental.description">Grâce à nos partenaires...</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+			<!-- SERVICES: Our Experience Section START -->
+			<section class="experience-section section-padding bg-dark">
+				<div class="experience-bg"></div>
+				<div class="container">
+					<div class="experience-content">
+						<div class="section-title text-center scroll-animate animate-in">
+							<h2 data-i18n="servicesPage.experienceTitle">OUR EXPERIENCE</h2>
+						</div>
+						<div class="experience-text-wrapper">
+							<div class="experience-paragraph scroll-animate" data-animation="slide-in-left">
+								<p data-i18n="servicesPage.experienceP1_1">
+									With years of expertise in the Moroccan and international film industry, ARTLY PRODUCTION has built a strong reputation as a reliable and creative partner for
+									global productions. Our portfolio spans across feature films, TV series, documentaries, commercials, music videos, and photo shoots, where we have collaborated with
+									international studios, streaming platforms, agencies, and independent filmmakers.
+								</p>
+								<p data-i18n="servicesPage.experienceP1_2">
+									Our team combines in-depth local knowledge with international standards of production, allowing us to deliver projects of all scales from intimate indie films to
+									large-scale, high-budget productions. We have successfully managed shoots in Morocco’s most iconic locations, including the Sahara desert, the Atlas Mountains,
+									historic imperial cities, and modern urban centers.
+								</p>
+							</div>
+							<div class="experience-paragraph scroll-animate" data-animation="slide-in-right" style="--delay: 0.2s">
+								<p data-i18n="servicesPage.experienceP2_intro">Over the years, we have supported productions in navigating Morocco’s unique filming environment:</p>
+								<ul>
+									<li data-i18n="servicesPage.experienceP2_li1">• Securing permits and authorizations efficiently through our licensed status</li>
+									<li data-i18n="servicesPage.experienceP2_li2">• Providing multilingual crews with global production experience</li>
+									<li data-i18n="servicesPage.experienceP2_li3">• Coordinating logistics and hospitality in both major cities and remote areas</li>
+									<li data-i18n="servicesPage.experienceP2_li4">• Advising on incentives such as Morocco’s 30% cash rebate and VAT exemptions</li>
+								</ul>
+								<p data-i18n="servicesPage.experienceP2_outro">
+									Our track record demonstrates not only our technical and logistical skills but also our ability to foster a creative and collaborative environment on set. With
+									ARTLY PRODUCTION, international filmmakers find more than a service provider they find a trusted partner with proven experience in making Morocco a world-class
+									filming destination.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- SERVICES: Our Experience Section END -->
 
-        <section id="professionals" class="team-section section-padding bg-light-dark">
-            <div class="container text-center">
-                <div class="section-title scroll-animate animate-in">
-                    <h2 data-i18n="servicesPage.professionalsTitle">Nos Professionnels</h2>
-                    <p data-i18n="servicesPage.professionalsSubtitle">Notre force réside dans nos collaborateurs. Nous travaillons avec un vaste réseau de professionnels qualifiés à travers le Maroc.</p>
-                </div>
-                <div class="grid grid-4">
-                    <!-- Team members will be populated here -->
-                </div>
-            </div>
-        </section>
-    </main>
+			<section id="professionals" class="team-section section-padding bg-light-dark">
+				<div class="container text-center">
+					<div class="section-title scroll-animate animate-in">
+						<h2 data-i18n="servicesPage.professionalsTitle">Nos Professionnels</h2>
+						<p data-i18n="servicesPage.professionalsSubtitle">
+							Notre force réside dans nos collaborateurs. Nous travaillons avec un vaste réseau de professionnels qualifiés à travers le Maroc.
+						</p>
+					</div>
+					<div class="grid grid-4">
+						<!-- Team members will be populated here -->
+					</div>
+				</div>
+			</section>
+		</main>
 
-    <footer class="footer">
-        <div class="container">
-            <div class="grid grid-4">
-                <div>
-                    <h3 class="logo">ARTLY <span>PRODUCTION</span></h3>
-                    <p class="footer-about" data-i18n="footer.about">ARTLY PRODUCTION est une société de production...</p>
-                </div>
-                <div>
-                    <h4 data-i18n="footer.quickLinks">Liens Rapides</h4>
-                    <ul class="footer-links">
-                        <li><a href="services.html" data-i18n="nav.services">Services</a></li>
-                        <li><a href="portfolio.html" data-i18n="nav.portfolio">Portfolio</a></li>
-                        <li><a href="filming-guide.html" data-i18n="nav.filming_guide">Guide de tournage</a></li>
-                        <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 data-i18n="footer.contactInfo">Contact</h4>
-                    <ul class="footer-contact">
-                        <li data-i18n="contactPage.address">2, Rue Ennabia, Hay Riad, Rabat, Maroc</li>
-                        <li data-i18n="contactPage.phone">+212 (0)6 71 88 58 88</li>
-                        <li><a href="mailto:contact@artlyproduction.com" data-i18n="contactPage.email">contact@artlyproduction.com</a></li>
-                    </ul>
-                </div>
-                 <div>
-                    <h4>Our Location</h4>
-                    <div class="map-placeholder">Map Placeholder</div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p data-i18n="footer.copyright">© 2024 Artly Production. Tous droits réservés.</p>
-            </div>
-        </div>
-    </footer>
-    
-    <script src="i18n.js"></script>
-    <script src="main.js" defer></script>
-</body>
+		<footer class="footer">
+			<div class="container">
+				<div class="grid grid-4">
+					<div>
+						<h3 class="logo">ARTLY <span>PRODUCTION</span></h3>
+						<p class="footer-about" data-i18n="footer.about">ARTLY PRODUCTION est une société de production...</p>
+					</div>
+					<div>
+						<h4 data-i18n="footer.quickLinks">Liens Rapides</h4>
+						<ul class="footer-links">
+							<li><a href="services.html" data-i18n="nav.services">Services</a></li>
+							<li><a href="portfolio.html" data-i18n="nav.portfolio">Portfolio</a></li>
+							<li><a href="filming-guide.html" data-i18n="nav.filming_guide">Guide de tournage</a></li>
+							<li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+						</ul>
+					</div>
+					<div>
+						<h4 data-i18n="footer.contactInfo">Contact</h4>
+						<ul class="footer-contact">
+							<li data-i18n="contactPage.address">2, Rue Ennabia, Hay Riad, Rabat, Maroc</li>
+							<li data-i18n="contactPage.phone">+212 (0)6 71 88 58 88</li>
+							<li><a href="mailto:contact@artlyproduction.com" data-i18n="contactPage.email">contact@artlyproduction.com</a></li>
+						</ul>
+					</div>
+					<div>
+						<h4>Our Location</h4>
+						<div class="map-placeholder">Map Placeholder</div>
+					</div>
+				</div>
+				<div class="footer-bottom">
+					<p data-i18n="footer.copyright">© 2024 Artly Production. Tous droits réservés.</p>
+				</div>
+			</div>
+		</footer>
+
+		<script src="i18n.js"></script>
+		<script src="main.js" defer></script>
+	</body>
 </html>

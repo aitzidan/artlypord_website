@@ -1,208 +1,259 @@
 <!DOCTYPE html>
 <html lang="fr" data-lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accueil - Artly Production</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-<script type="importmap">
-{
-  "imports": {
-    "react": "https://aistudiocdn.com/react@^19.2.0",
-    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
-    "react/": "https://aistudiocdn.com/react@^19.2.0/",
-    "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.9.5",
-    "lodash": "https://aistudiocdn.com/lodash@^4.17.21",
-    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.553.0"
-  }
-}
-</script>
-<link rel="stylesheet" href="/index.css">
-</head>
-<body id="page-home">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Accueil - Artly Production</title>
+		<link rel="stylesheet" href="style.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+		<script type="importmap">
+			{
+				"imports": {
+					"react": "https://aistudiocdn.com/react@^19.2.0",
+					"react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+					"react/": "https://aistudiocdn.com/react@^19.2.0/",
+					"react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.9.5",
+					"lodash": "https://aistudiocdn.com/lodash@^4.17.21",
+					"lucide-react": "https://aistudiocdn.com/lucide-react@^0.553.0"
+				}
+			}
+		</script>
+	</head>
+	<body id="page-home">
+		<header class="header sticky-header">
+			<div class="container header-container">
+				<a href="index.html" class="logo">ARTLY <span>PRODUCTION</span></a>
+				<nav class="main-nav">
+					<a href="index.html" class="nav-link" data-i18n="nav.home">Accueil</a>
+					<a href="services.html" class="nav-link" data-i18n="nav.services">Services</a>
+					<a href="portfolio.html" class="nav-link" data-i18n="nav.portfolio">Portfolio</a>
+					<a href="filming-guide.html" class="nav-link" data-i18n="nav.filming_guide">Guide de tournage</a>
+					<a href="locations.html" class="nav-link" data-i18n="nav.locations">Lieux</a>
+					<a href="blog.html" class="nav-link" data-i18n="nav.blog">Blog</a>
+					<a href="contact.html" class="nav-link" data-i18n="nav.contact">Contact</a>
+				</nav>
+				<div class="header-actions">
+					<div class="lang-switcher">
+						<button class="lang-btn" data-lang="fr">FR</button>
+						<span>|</span>
+						<button class="lang-btn" data-lang="en">EN</button>
+					</div>
+					<button id="mobile-nav-toggle" class="mobile-nav-toggle" aria-label="Toggle navigation">
+						<svg
+							class="icon-menu"
+							xmlns="http://www.w3.org/2000/svg"
+							width="24"
+							height="24"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						>
+							<line x1="3" y1="12" x2="21" y2="12"></line>
+							<line x1="3" y1="6" x2="21" y2="6"></line>
+							<line x1="3" y1="18" x2="21" y2="18"></line>
+						</svg>
+						<svg
+							class="icon-close"
+							xmlns="http://www.w3.org/2000/svg"
+							width="24"
+							height="24"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						>
+							<line x1="18" y1="6" x2="6" y2="18"></line>
+							<line x1="6" y1="6" x2="18" y2="18"></line>
+						</svg>
+					</button>
+				</div>
+			</div>
+		</header>
 
-    <header class="header sticky-header">
-        <div class="container header-container">
-            <a href="index.html" class="logo">ARTLY <span>PRODUCTION</span></a>
-            <nav class="main-nav">
-                <a href="index.html" class="nav-link" data-i18n="nav.home">Accueil</a>
-                <a href="services.html" class="nav-link" data-i18n="nav.services">Services</a>
-                <a href="portfolio.html" class="nav-link" data-i18n="nav.portfolio">Portfolio</a>
-                <a href="filming-guide.html" class="nav-link" data-i18n="nav.filming_guide">Guide de tournage</a>
-                <a href="locations.html" class="nav-link" data-i18n="nav.locations">Lieux</a>
-                <a href="blog.html" class="nav-link" data-i18n="nav.blog">Blog</a>
-                <a href="contact.html" class="nav-link" data-i18n="nav.contact">Contact</a>
-            </nav>
-            <div class="header-actions">
-                <div class="lang-switcher">
-                    <button class="lang-btn" data-lang="fr">FR</button>
-                    <span>|</span>
-                    <button class="lang-btn" data-lang="en">EN</button>
-                </div>
-                <button id="mobile-nav-toggle" class="mobile-nav-toggle" aria-label="Toggle navigation">
-                    <svg class="icon-menu" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
-                    <svg class="icon-close" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-                </button>
-            </div>
-        </div>
-    </header>
+		<main>
+			<section class="hero">
+				<div class="hero-bg"></div>
+				<div class="container hero-content">
+					<div class="scroll-animate animate-in">
+						<h1 data-i18n="home.heroTitle">Votre Partenaire de Confiance pour le Cinéma au Maroc</h1>
+						<p data-i18n="home.heroSubtitle">
+							ARTLY PRODUCTION est une société de production cinématographique et audiovisuelle de premier plan basée au Maroc. Nous donnons vie à votre vision créative avec des services
+							de production complets, sur mesure et de classe mondiale.
+						</p>
+						<a href="contact.html" class="btn btn-primary" data-i18n="home.ctaButton">Contactez-nous</a>
+					</div>
+				</div>
+			</section>
 
-    <main>
-        <section class="hero">
-            <div class="hero-bg"></div>
-            <div class="container hero-content">
-                <div class="scroll-animate animate-in">
-                    <h1 data-i18n="home.heroTitle">Votre Partenaire de Confiance pour le Cinéma au Maroc</h1>
-                    <p data-i18n="home.heroSubtitle">ARTLY PRODUCTION est une société de production cinématographique et audiovisuelle de premier plan basée au Maroc. Nous donnons vie à votre vision créative avec des services de production complets, sur mesure et de classe mondiale.</p>
-                    <a href="contact.html" class="btn btn-primary" data-i18n="home.ctaButton">Contactez-nous</a>
-                </div>
-            </div>
-        </section>
+			<section class="why-us section-padding bg-light-dark">
+				<div class="container">
+					<div class="section-title text-center scroll-animate animate-in">
+						<h2 data-i18n="home.whyUsTitle">Pourquoi Artly Production ?</h2>
+					</div>
+					<div class="grid grid-4">
+						<div class="scroll-animate animate-in" style="--delay: 0s">
+							<div class="why-us-card">
+								<p data-i18n="home.whyUsPoint1">Expertise locale, standards internationaux.</p>
+							</div>
+						</div>
+						<div class="scroll-animate animate-in" style="--delay: 0.1s">
+							<div class="why-us-card">
+								<p data-i18n="home.whyUsPoint2">Accès à des lieux de tournage uniques et diversifiés.</p>
+							</div>
+						</div>
+						<div class="scroll-animate animate-in" style="--delay: 0.2s">
+							<div class="why-us-card">
+								<p data-i18n="home.whyUsPoint3">Gestion logistique complète et sans stress.</p>
+							</div>
+						</div>
+						<div class="scroll-animate animate-in" style="--delay: 0.3s">
+							<div class="why-us-card">
+								<p data-i18n="home.whyUsPoint4">Optimisation du budget et accès à la remise de 30%.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
 
-        <section class="why-us section-padding bg-light-dark">
-            <div class="container">
-                <div class="section-title text-center scroll-animate animate-in">
-                    <h2 data-i18n="home.whyUsTitle">Pourquoi Artly Production ?</h2>
-                </div>
-                <div class="grid grid-4">
-                    <div class="scroll-animate animate-in" style="--delay: 0s;">
-                        <div class="why-us-card">
-                            <p data-i18n="home.whyUsPoint1">Expertise locale, standards internationaux.</p>
-                        </div>
-                    </div>
-                    <div class="scroll-animate animate-in" style="--delay: 0.1s;">
-                        <div class="why-us-card">
-                            <p data-i18n="home.whyUsPoint2">Accès à des lieux de tournage uniques et diversifiés.</p>
-                        </div>
-                    </div>
-                    <div class="scroll-animate animate-in" style="--delay: 0.2s;">
-                        <div class="why-us-card">
-                            <p data-i18n="home.whyUsPoint3">Gestion logistique complète et sans stress.</p>
-                        </div>
-                    </div>
-                    <div class="scroll-animate animate-in" style="--delay: 0.3s;">
-                        <div class="why-us-card">
-                            <p data-i18n="home.whyUsPoint4">Optimisation du budget et accès à la remise de 30%.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+			<!-- HOME: Our work section START -->
+			<section class="work-teaser section-padding bg-dark">
+				<div class="container">
+					<div class="scroll-animate animate-in">
+						<p class="work-teaser-description text-center">
+							From award-winning feature films and captivating TV series to high-impact commercials and documentaries, we bring creative visions to life. Our portfolio showcases a
+							diverse range of projects, each reflecting our commitment to quality, creativity, and seamless execution in the heart of Morocco.
+						</p>
+					</div>
+					<div class="grid grid-3">
+						<div class="scroll-animate animate-in" style="--delay: 0s">
+							<a href="portfolio.html" class="work-teaser-card">
+								<img src="https://picsum.photos/seed/ghilad/800/600" alt="GHILAD" />
+								<div class="work-teaser-overlay">
+									<h3>GHILAD</h3>
+								</div>
+							</a>
+						</div>
+						<div class="scroll-animate animate-in" style="--delay: 0.1s">
+							<a href="portfolio.html" class="work-teaser-card">
+								<img src="https://picsum.photos/seed/timrt/800/600" alt="TIMRT N TZURI" />
+								<div class="work-teaser-overlay">
+									<h3>TIMRT N TZURI</h3>
+								</div>
+							</a>
+						</div>
+						<div class="scroll-animate animate-in" style="--delay: 0.2s">
+							<a href="portfolio.html" class="work-teaser-card">
+								<img src="https://picsum.photos/seed/sahara/800/600" alt="SAHARA MON AMOUR" />
+								<div class="work-teaser-overlay">
+									<h3>SAHARA MON AMOUR</h3>
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="text-center scroll-animate animate-in" style="--delay: 0.3s; margin-top: 3rem">
+						<a href="portfolio.html" class="btn btn-primary" data-i18n="home.discoverMore">Discover more</a>
+					</div>
+				</div>
+			</section>
+			<!-- HOME: Our work section END -->
 
-        <section class="portfolio-preview section-padding bg-dark">
-            <div class="container">
-                <div class="section-title text-center scroll-animate animate-in">
-                    <h2 data-i18n="home.portfolioTitle">Nos Projets Récents</h2>
-                </div>
-                <div class="grid grid-3">
-                    <!-- Portfolio items will be dynamically loaded if needed, or static for this version -->
-                    <div class="scroll-animate animate-in" style="--delay: 0s;">
-                        <a href="portfolio.html" class="portfolio-card">
-                            <img src="https://picsum.photos/seed/ghilad/800/600" alt="GHILAD">
-                            <div class="portfolio-card-overlay">
-                                <span class="tag tag-red" data-i18n="portfolioData.ghilad.type">Programme TV</span>
-                                <h3 data-i18n="portfolioData.ghilad.title">GHILAD</h3>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="scroll-animate animate-in" style="--delay: 0.1s;">
-                        <a href="portfolio.html" class="portfolio-card">
-                            <img src="https://picsum.photos/seed/timrt/800/600" alt="TIMRT N TZURI">
-                            <div class="portfolio-card-overlay">
-                                <span class="tag tag-red" data-i18n="portfolioData.timrt.type">Programme TV</span>
-                                <h3 data-i18n="portfolioData.timrt.title">TIMRT N TZURI</h3>
-                            </div>
-                        </a>
-                    </div>
-                     <div class="scroll-animate animate-in" style="--delay: 0.2s;">
-                        <a href="portfolio.html" class="portfolio-card">
-                            <img src="https://picsum.photos/seed/sahara/800/600" alt="SAHARA MON AMOUR">
-                            <div class="portfolio-card-overlay">
-                                <span class="tag tag-red" data-i18n="portfolioData.sahara.type">Film Documentaire</span>
-                                <h3 data-i18n="portfolioData.sahara.title">SAHARA MON AMOUR</h3>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
+			<!-- HOME: "Our Professionals" section START -->
+			<section class="team-preview section-padding bg-light-dark">
+				<div class="container text-center">
+					<div class="section-title scroll-animate animate-in">
+						<h2 data-i18n="home.teamTitle">Nos Professionnels</h2>
+					</div>
+					<div class="grid grid-3">
+						<div class="scroll-animate animate-in" style="--delay: 0s">
+							<div class="team-card-professional">
+								<img src="https://picsum.photos/seed/ayoub/400/400" alt="Ayoub Ait Bihi" />
+								<div class="team-card-overlay">
+									<div class="team-card-info">
+										<h3 class="team-member-name">Ayoub Ait Bihi</h3>
+										<p class="team-member-role" data-i18n="teamData.1.role">DIRECTEUR GÉNÉRAL, PRODUCTEUR</p>
+									</div>
+									<p class="team-member-description" data-i18n="teamData.1.description">Fournit la vision globale, le leadership et la supervision de la production.</p>
+								</div>
+							</div>
+						</div>
+						<div class="scroll-animate animate-in" style="--delay: 0.1s">
+							<div class="team-card-professional">
+								<img src="https://picsum.photos/seed/latefa/400/400" alt="Latefa Ahrrare" />
+								<div class="team-card-overlay">
+									<div class="team-card-info">
+										<h3 class="team-member-name">Latefa Ahrrare</h3>
+										<p class="team-member-role" data-i18n="teamData.2.role">DIRECTRICE ARTISTIQUE</p>
+									</div>
+									<p class="team-member-description" data-i18n="teamData.2.description">Supervise la direction créative, assurant la cohérence artistique à travers les projets.</p>
+								</div>
+							</div>
+						</div>
+						<div class="scroll-animate animate-in" style="--delay: 0.2s">
+							<div class="team-card-professional">
+								<img src="https://picsum.photos/seed/sara/400/400" alt="Sara Hajji" />
+								<div class="team-card-overlay">
+									<div class="team-card-info">
+										<h3 class="team-member-name">Sara Hajji</h3>
+										<p class="team-member-role" data-i18n="teamData.3.role">PRODUCTRICE DÉLÉGUÉE</p>
+									</div>
+									<p class="team-member-description" data-i18n="teamData.3.description">
+										Gère le budget et le planning, s'assurant que le projet est livré à temps et dans les limites financières.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="scroll-animate animate-in" style="--delay: 0.3s; margin-top: 3rem">
+						<a href="services.html#professionals" class="btn btn-secondary" data-i18n="home.teamButton">Voir toute l'équipe</a>
+					</div>
+				</div>
+			</section>
+			<!-- HOME: "Our Professionals" section END -->
+		</main>
 
-        <section class="team-preview section-padding bg-light-dark">
-            <div class="container text-center">
-                <div class="section-title scroll-animate animate-in">
-                    <h2 data-i18n="home.teamTitle">Nos Professionnels</h2>
-                </div>
-                <div class="grid grid-3">
-                    <div class="scroll-animate animate-in" style="--delay: 0s;">
-                        <div class="team-card-preview">
-                            <img src="https://picsum.photos/seed/ayoub/400/400" alt="Ayoub Ait Bihi">
-                            <h3>Ayoub Ait Bihi</h3>
-                            <p data-i18n="teamData.1.role">DIRECTEUR GÉNÉRAL, PRODUCTEUR</p>
-                        </div>
-                    </div>
-                    <div class="scroll-animate animate-in" style="--delay: 0.1s;">
-                         <div class="team-card-preview">
-                            <img src="https://picsum.photos/seed/latefa/400/400" alt="Latefa Ahrrare">
-                            <h3>Latefa Ahrrare</h3>
-                            <p data-i18n="teamData.2.role">DIRECTRICE ARTISTIQUE</p>
-                        </div>
-                    </div>
-                    <div class="scroll-animate animate-in" style="--delay: 0.2s;">
-                         <div class="team-card-preview">
-                            <img src="https://picsum.photos/seed/sara/400/400" alt="Sara Hajji">
-                            <h3>Sara Hajji</h3>
-                            <p data-i18n="teamData.3.role">PRODUCTRICE DÉLÉGUÉE</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="scroll-animate animate-in" style="--delay: 0.3s;">
-                    <a href="services.html#professionals" class="btn btn-secondary" data-i18n="home.teamButton">Voir toute l'équipe</a>
-                </div>
-            </div>
-        </section>
+		<footer class="footer">
+			<div class="container">
+				<div class="grid grid-4">
+					<div>
+						<h3 class="logo">ARTLY <span>PRODUCTION</span></h3>
+						<p class="footer-about" data-i18n="footer.about">ARTLY PRODUCTION est une société de production...</p>
+					</div>
+					<div>
+						<h4 data-i18n="footer.quickLinks">Liens Rapides</h4>
+						<ul class="footer-links">
+							<li><a href="services.html" data-i18n="nav.services">Services</a></li>
+							<li><a href="portfolio.html" data-i18n="nav.portfolio">Portfolio</a></li>
+							<li><a href="filming-guide.html" data-i18n="nav.filming_guide">Guide de tournage</a></li>
+							<li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+						</ul>
+					</div>
+					<div>
+						<h4 data-i18n="footer.contactInfo">Contact</h4>
+						<ul class="footer-contact">
+							<li data-i18n="contactPage.address">2, Rue Ennabia, Hay Riad, Rabat, Maroc</li>
+							<li data-i18n="contactPage.phone">+212 (0)6 71 88 58 88</li>
+							<li><a href="mailto:contact@artlyproduction.com" data-i18n="contactPage.email">contact@artlyproduction.com</a></li>
+						</ul>
+					</div>
+					<div>
+						<h4>Our Location</h4>
+						<div class="map-placeholder">Map Placeholder</div>
+					</div>
+				</div>
+				<div class="footer-bottom">
+					<p data-i18n="footer.copyright">© 2024 Artly Production. Tous droits réservés.</p>
+				</div>
+			</div>
+		</footer>
 
-    </main>
-
-    <footer class="footer">
-        <div class="container">
-            <div class="grid grid-4">
-                <div>
-                    <h3 class="logo">ARTLY <span>PRODUCTION</span></h3>
-                    <p class="footer-about" data-i18n="footer.about">ARTLY PRODUCTION est une société de production...</p>
-                </div>
-                <div>
-                    <h4 data-i18n="footer.quickLinks">Liens Rapides</h4>
-                    <ul class="footer-links">
-                        <li><a href="services.html" data-i18n="nav.services">Services</a></li>
-                        <li><a href="portfolio.html" data-i18n="nav.portfolio">Portfolio</a></li>
-                        <li><a href="filming-guide.html" data-i18n="nav.filming_guide">Guide de tournage</a></li>
-                        <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 data-i18n="footer.contactInfo">Contact</h4>
-                    <ul class="footer-contact">
-                        <li data-i18n="contactPage.address">2, Rue Ennabia, Hay Riad, Rabat, Maroc</li>
-                        <li data-i18n="contactPage.phone">+212 (0)6 71 88 58 88</li>
-                        <li><a href="mailto:contact@artlyproduction.com" data-i18n="contactPage.email">contact@artlyproduction.com</a></li>
-                    </ul>
-                </div>
-                 <div>
-                    <h4>Our Location</h4>
-                    <div class="map-placeholder">Map Placeholder</div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p data-i18n="footer.copyright">© 2024 Artly Production. Tous droits réservés.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script src="i18n.js"></script>
-    <script src="main.js" defer></script>
-<script type="module" src="/index.tsx"></script>
-</body>
+		<script src="i18n.js"></script>
+		<script src="main.js" defer></script>
+	</body>
 </html>

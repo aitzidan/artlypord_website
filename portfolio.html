@@ -1,117 +1,145 @@
 <!DOCTYPE html>
 <html lang="fr" data-lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Artly Production</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-</head>
-<body id="page-portfolio">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Portfolio - Artly Production</title>
+		<link rel="stylesheet" href="style.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+	</head>
+	<body id="page-portfolio">
+		<header class="header sticky-header">
+			<div class="container header-container">
+				<a href="index.html" class="logo">ARTLY <span>PRODUCTION</span></a>
+				<nav class="main-nav">
+					<a href="index.html" class="nav-link" data-i18n="nav.home">Accueil</a>
+					<a href="services.html" class="nav-link" data-i18n="nav.services">Services</a>
+					<a href="portfolio.html" class="nav-link" data-i18n="nav.portfolio">Portfolio</a>
+					<a href="filming-guide.html" class="nav-link" data-i18n="nav.filming_guide">Guide de tournage</a>
+					<a href="locations.html" class="nav-link" data-i18n="nav.locations">Lieux</a>
+					<a href="blog.html" class="nav-link" data-i18n="nav.blog">Blog</a>
+					<a href="contact.html" class="nav-link" data-i18n="nav.contact">Contact</a>
+				</nav>
+				<div class="header-actions">
+					<div class="lang-switcher">
+						<button class="lang-btn" data-lang="fr">FR</button>
+						<span>|</span>
+						<button class="lang-btn" data-lang="en">EN</button>
+					</div>
+					<button id="mobile-nav-toggle" class="mobile-nav-toggle" aria-label="Toggle navigation">
+						<svg
+							class="icon-menu"
+							xmlns="http://www.w3.org/2000/svg"
+							width="24"
+							height="24"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						>
+							<line x1="3" y1="12" x2="21" y2="12"></line>
+							<line x1="3" y1="6" x2="21" y2="6"></line>
+							<line x1="3" y1="18" x2="21" y2="18"></line>
+						</svg>
+						<svg
+							class="icon-close"
+							xmlns="http://www.w3.org/2000/svg"
+							width="24"
+							height="24"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						>
+							<line x1="18" y1="6" x2="6" y2="18"></line>
+							<line x1="6" y1="6" x2="18" y2="18"></line>
+						</svg>
+					</button>
+				</div>
+			</div>
+		</header>
 
-    <header class="header sticky-header">
-        <div class="container header-container">
-            <a href="index.html" class="logo">ARTLY <span>PRODUCTION</span></a>
-            <nav class="main-nav">
-                <a href="index.html" class="nav-link" data-i18n="nav.home">Accueil</a>
-                <a href="services.html" class="nav-link" data-i18n="nav.services">Services</a>
-                <a href="portfolio.html" class="nav-link" data-i18n="nav.portfolio">Portfolio</a>
-                <a href="filming-guide.html" class="nav-link" data-i18n="nav.filming_guide">Guide de tournage</a>
-                <a href="locations.html" class="nav-link" data-i18n="nav.locations">Lieux</a>
-                <a href="blog.html" class="nav-link" data-i18n="nav.blog">Blog</a>
-                <a href="contact.html" class="nav-link" data-i18n="nav.contact">Contact</a>
-            </nav>
-            <div class="header-actions">
-                <div class="lang-switcher">
-                    <button class="lang-btn" data-lang="fr">FR</button>
-                    <span>|</span>
-                    <button class="lang-btn" data-lang="en">EN</button>
-                </div>
-                <button id="mobile-nav-toggle" class="mobile-nav-toggle" aria-label="Toggle navigation">
-                    <svg class="icon-menu" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
-                    <svg class="icon-close" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-                </button>
-            </div>
-        </div>
-    </header>
+		<main>
+			<section class="page-header">
+				<div class="container text-center scroll-animate animate-in">
+					<h1 data-i18n="portfolioPage.title">Notre Portfolio</h1>
+					<p data-i18n="portfolioPage.subtitle">Des films primés aux productions télévisuelles à grande échelle, notre travail parle de lui-même.</p>
+				</div>
+			</section>
 
-    <main>
-        <section class="page-header">
-            <div class="container text-center scroll-animate animate-in">
-                <h1 data-i18n="portfolioPage.title">Notre Portfolio</h1>
-                <p data-i18n="portfolioPage.subtitle">Des films primés aux productions télévisuelles à grande échelle, notre travail parle de lui-même.</p>
-            </div>
-        </section>
+			<section class="portfolio-grid section-padding">
+				<div class="container">
+					<div id="portfolio-items-container" class="grid grid-3">
+						<!-- Portfolio items will be populated by JS -->
+					</div>
+				</div>
+			</section>
+		</main>
 
-        <section class="portfolio-grid section-padding">
-            <div class="container">
-                <div id="portfolio-items-container" class="grid grid-3">
-                    <!-- Portfolio items will be populated by JS -->
-                </div>
-            </div>
-        </section>
-    </main>
+		<div id="portfolio-modal" class="modal">
+			<div class="modal-content">
+				<button id="modal-close-btn" class="modal-close">&times;</button>
+				<img id="modal-image" src="" alt="" />
+				<div class="modal-body">
+					<span id="modal-type" class="tag tag-red"></span>
+					<h2 id="modal-title"></h2>
+					<p id="modal-synopsis"></p>
+					<div class="grid grid-2">
+						<div>
+							<h4 data-i18n="portfolioModal.services">Services Provided</h4>
+							<p id="modal-services"></p>
+						</div>
+						<div>
+							<h4 data-i18n="portfolioModal.locations">Locations</h4>
+							<p id="modal-locations"></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 
-    <div id="portfolio-modal" class="modal">
-        <div class="modal-content">
-            <button id="modal-close-btn" class="modal-close">&times;</button>
-            <img id="modal-image" src="" alt="">
-            <div class="modal-body">
-                <span id="modal-type" class="tag tag-red"></span>
-                <h2 id="modal-title"></h2>
-                <p id="modal-synopsis"></p>
-                <div class="grid grid-2">
-                    <div>
-                        <h4 data-i18n="portfolioModal.services">Services Provided</h4>
-                        <p id="modal-services"></p>
-                    </div>
-                    <div>
-                        <h4 data-i18n="portfolioModal.locations">Locations</h4>
-                        <p id="modal-locations"></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <footer class="footer">
-        <div class="container">
-            <div class="grid grid-4">
-                <div>
-                    <h3 class="logo">ARTLY <span>PRODUCTION</span></h3>
-                    <p class="footer-about" data-i18n="footer.about">ARTLY PRODUCTION est une société de production...</p>
-                </div>
-                <div>
-                    <h4 data-i18n="footer.quickLinks">Liens Rapides</h4>
-                    <ul class="footer-links">
-                        <li><a href="services.html" data-i18n="nav.services">Services</a></li>
-                        <li><a href="portfolio.html" data-i18n="nav.portfolio">Portfolio</a></li>
-                        <li><a href="filming-guide.html" data-i18n="nav.filming_guide">Guide de tournage</a></li>
-                        <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 data-i18n="footer.contactInfo">Contact</h4>
-                    <ul class="footer-contact">
-                        <li data-i18n="contactPage.address">2, Rue Ennabia, Hay Riad, Rabat, Maroc</li>
-                        <li data-i18n="contactPage.phone">+212 (0)6 71 88 58 88</li>
-                        <li><a href="mailto:contact@artlyproduction.com" data-i18n="contactPage.email">contact@artlyproduction.com</a></li>
-                    </ul>
-                </div>
-                 <div>
-                    <h4>Our Location</h4>
-                    <div class="map-placeholder">Map Placeholder</div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p data-i18n="footer.copyright">© 2024 Artly Production. Tous droits réservés.</p>
-            </div>
-        </div>
-    </footer>
+		<footer class="footer">
+			<div class="container">
+				<div class="grid grid-4">
+					<div>
+						<h3 class="logo">ARTLY <span>PRODUCTION</span></h3>
+						<p class="footer-about" data-i18n="footer.about">ARTLY PRODUCTION est une société de production...</p>
+					</div>
+					<div>
+						<h4 data-i18n="footer.quickLinks">Liens Rapides</h4>
+						<ul class="footer-links">
+							<li><a href="services.html" data-i18n="nav.services">Services</a></li>
+							<li><a href="portfolio.html" data-i18n="nav.portfolio">Portfolio</a></li>
+							<li><a href="filming-guide.html" data-i18n="nav.filming_guide">Guide de tournage</a></li>
+							<li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+						</ul>
+					</div>
+					<div>
+						<h4 data-i18n="footer.contactInfo">Contact</h4>
+						<ul class="footer-contact">
+							<li data-i18n="contactPage.address">2, Rue Ennabia, Hay Riad, Rabat, Maroc</li>
+							<li data-i18n="contactPage.phone">+212 (0)6 71 88 58 88</li>
+							<li><a href="mailto:contact@artlyproduction.com" data-i18n="contactPage.email">contact@artlyproduction.com</a></li>
+						</ul>
+					</div>
+					<div>
+						<h4>Our Location</h4>
+						<div class="map-placeholder">Map Placeholder</div>
+					</div>
+				</div>
+				<div class="footer-bottom">
+					<p data-i18n="footer.copyright">© 2024 Artly Production. Tous droits réservés.</p>
+				</div>
+			</div>
+		</footer>
 
-    <script src="i18n.js"></script>
-    <script src="main.js" defer></script>
-</body>
+		<script src="i18n.js"></script>
+		<script src="main.js" defer></script>
+	</body>
 </html>
