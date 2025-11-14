@@ -78,6 +78,7 @@ const translations = {
 			title: "Notre Blog",
 			subtitle: "Perspectives, actualités et histoires de l'industrie cinématographique marocaine.",
 			readMore: "Lire la suite",
+			readLess: "Lire moins",
 		},
 		contactPage: {
 			title: "Contactez-nous",
@@ -277,22 +278,49 @@ const translations = {
 			},
 		},
 		blogData: {
-			1: {
-				title: "Maximiser la remise de 30% au Maroc",
-				excerpt: "Un guide approfondi sur la manière de structurer votre production pour tirer le meilleur parti de l'incitation financière du Maroc.",
-				category: "Production",
+			"why-morocco": {
+				title: "Pourquoi tourner au Maroc ? 5 raisons qui séduisent les productions internationales",
+				excerpt:
+					"Des déserts épiques aux médinas animées, le Maroc s'est imposé comme une destination de choix pour les cinéastes du monde entier. Découvrez les cinq raisons principales qui en font un lieu de tournage si attractif.",
+				fullText:
+					"Au-delà de ses paysages à couper le souffle, le Maroc offre une combinaison unique d'avantages. Premièrement, sa **diversité géographique** est inégalée : en quelques heures, vous pouvez passer des dunes du Sahara aux sommets enneigés de l'Atlas ou aux côtes atlantiques. Deuxièmement, le pays dispose d'**équipes techniques locales expérimentées** et multilingues, habituées aux exigences des productions internationales. Troisièmement, l'**efficacité des coûts** est un atout majeur, renforcée par des incitations gouvernementales. Quatrièmement, l'**hospitalité marocaine** légendaire garantit une expérience de tournage agréable et bien organisée. Enfin, sa **richesse culturelle** offre une authenticité visuelle que peu d'autres endroits peuvent égaler.",
+				category: "Guide",
+				date: "22 Octobre 2023",
+			},
+			"cash-rebate": {
+				title: "Comprendre le cash rebate de 30 % au Maroc",
+				excerpt:
+					"L'une des incitations les plus attractives pour tourner au Maroc est sa remise en espèces (cash rebate) de 30 %. Mais comment fonctionne-t-elle exactement et comment votre production peut-elle en bénéficier ?",
+				fullText:
+					"Le cash rebate de 30 % est une incitation financière offerte par le Centre Cinématographique Marocain (CCM) pour attirer les productions étrangères. Pour être éligible, un projet doit répondre à certains critères, notamment un minimum de dépenses locales. Les dépenses éligibles incluent les salaires des techniciens et acteurs marocains, la location de matériel local, l'hébergement, le transport et bien d'autres services. Chez ARTLY PRODUCTION, notre équipe administrative est experte dans la navigation de ce processus. Nous vous aidons à structurer votre budget et à préparer la documentation nécessaire pour maximiser votre éligibilité et garantir une demande fluide, vous permettant ainsi de tirer le meilleur parti de cet avantage financier considérable.",
+				category: "Incentives",
 				date: "15 Octobre 2023",
 			},
-			2: {
-				title: "Joyaux cachés : Repérage au-delà de Marrakech",
-				excerpt: "Découvrez des lieux de tournage moins connus mais tout aussi époustouflants que le Maroc a à offrir, des montagnes de l'Atlas aux villages côtiers.",
+			"iconic-locations": {
+				title: "Des dunes de Merzouga aux ruelles de Chefchaouen : nos lieux de tournage iconiques",
+				excerpt:
+					"Le Maroc est un personnage à part entière. Explorez avec nous certains des lieux les plus emblématiques qui ont servi de décor à des productions mémorables, offrant une polyvalence visuelle extraordinaire.",
+				fullText:
+					"Chaque lieu au Maroc raconte une histoire. Les dunes infinies de **Merzouga** sont parfaites pour les épopées désertiques et les scènes de science-fiction. Les rues bleues et oniriques de **Chefchaouen**, nichées dans les montagnes du Rif, créent une atmosphère magique, idéale pour les contes de fées ou les drames intimes. La médina animée de **Marrakech** offre un labyrinthe de couleurs, de sons et de textures, tandis qu'**Ouarzazate**, la porte du désert, abrite des studios de renommée mondiale et des kasbahs qui ont accueilli d'innombrables superproductions. Enfin, la côte sauvage de **Dakhla**, où le désert rencontre l'océan, propose un paysage unique et spectaculaire.",
 				category: "Lieux",
 				date: "28 Septembre 2023",
 			},
-			3: {
-				title: "Naviguer les permis de drone : un guide pour les cinéastes",
-				excerpt: "Tout ce que vous devez savoir sur l'obtention des autorisations nécessaires pour des prises de vue aériennes spectaculaires au Maroc.",
-				category: "Technique",
+			"a-to-z-support": {
+				title: "Comment ARTLY PRODUCTION accompagne une production internationale de A à Z",
+				excerpt:
+					"Accueillir une production étrangère est plus qu'un simple service, c'est un partenariat. Découvrez notre processus complet, conçu pour garantir une expérience de tournage fluide et réussie au Maroc.",
+				fullText:
+					"Notre accompagnement commence dès le premier contact. Nous débutons par l'analyse de votre scénario pour proposer un **budget prévisionnel** et un plan de travail optimisé. Ensuite, notre équipe de **repérage** vous présente les meilleurs lieux correspondant à votre vision. Nous prenons en charge toutes les **démarches administratives**, y compris les permis de tournage et de drone. Nous assemblons les **meilleures équipes techniques et artistiques** locales et gérons toute la **logistique** : transport, hébergement, restauration. Sur le plateau, nos coordinateurs assurent le bon déroulement des opérations. Nous sommes votre partenaire dévoué, de la pré-production à la livraison finale.",
+				category: "Services",
+				date: "12 Septembre 2023",
+			},
+			"case-study-desert": {
+				title: "Étude de cas : tourner un documentaire dans le désert marocain",
+				excerpt:
+					"Le désert est un environnement aussi magnifique qu'exigeant. À travers une étude de cas, nous partageons les défis logistiques et les solutions créatives pour mener à bien un tournage dans le Sahara.",
+				fullText:
+					"Pour un récent documentaire, notre mission était de filmer la vie nomade pendant trois semaines dans des zones reculées. Le premier défi était la **logistique**. Nous avons mis en place un camp de base mobile avec des véhicules 4x4 pour transporter l'équipe et le matériel sensible. La **gestion des conditions extrêmes**, avec des températures fluctuantes, a nécessité des plannings de tournage adaptés, principalement à l'aube et au crépuscule. La **protection de l'équipement** contre le sable fin était cruciale, utilisant des protections spécifiques pour les caméras et les optiques. Enfin, la **collaboration avec les communautés locales** a été essentielle, non seulement pour l'authenticité mais aussi pour la sécurité et le soutien logistique. Ce projet illustre notre capacité à transformer les défis du désert en une expérience de production réussie et inoubliable.",
+				category: "Étude de cas",
 				date: "5 Septembre 2023",
 			},
 		},
@@ -375,7 +403,8 @@ const translations = {
 		blogPage: {
 			title: "Our Blog",
 			subtitle: "Insights, news, and stories from the Moroccan film industry.",
-			readMore: "Read More",
+			readMore: "Read more",
+			readLess: "Read less",
 		},
 		contactPage: {
 			title: "Contact Us",
@@ -524,22 +553,48 @@ const translations = {
 			taghazout: { name: "Taghazout", description: "A bohemian fishing village turned world-class surf spot, with rugged cliffs and perfect waves.", tags: ["Coast"] },
 		},
 		blogData: {
-			1: {
-				title: "Maximizing the 30% Cash Rebate in Morocco",
-				excerpt: "An in-depth guide on how to structure your production to take full advantage of Morocco's financial incentive.",
-				category: "Production",
+			"why-morocco": {
+				title: "Why Shoot in Morocco? 5 Reasons International Productions Love It",
+				excerpt:
+					"From epic deserts to bustling medinas, Morocco has established itself as a top destination for filmmakers worldwide. Discover the five key reasons that make it such an attractive filming location.",
+				fullText:
+					"Beyond its breathtaking landscapes, Morocco offers a unique combination of advantages. First, its **geographical diversity** is unparalleled: in a few hours, you can travel from the Sahara's dunes to the snowy peaks of the Atlas or the Atlantic coastlines. Second, the country boasts experienced and multilingual **local technical crews** accustomed to the demands of international productions. Third, **cost-effectiveness** is a major asset, reinforced by government incentives. Fourth, the legendary **Moroccan hospitality** ensures a pleasant and well-organized filming experience. Finally, its **cultural richness** provides a visual authenticity that few other places can match.",
+				category: "Guide",
+				date: "October 22, 2023",
+			},
+			"cash-rebate": {
+				title: "Understanding Morocco’s 30% Cash Rebate for Film Productions",
+				excerpt: "One of the most attractive incentives for filming in Morocco is its 30% cash rebate. But how does it work, and how can your production benefit from it?",
+				fullText:
+					"The 30% cash rebate is a financial incentive offered by the Moroccan Cinematographic Center (CCM) to attract foreign productions. To be eligible, a project must meet certain criteria, including a minimum of local expenditure. Eligible expenses include the salaries of Moroccan technicians and actors, local equipment rental, accommodation, transportation, and many other services. At ARTLY PRODUCTION, our administrative team is expert in navigating this process. We help you structure your budget and prepare the necessary documentation to maximize your eligibility and ensure a smooth application, allowing you to make the most of this significant financial advantage.",
+				category: "Incentives",
 				date: "October 15, 2023",
 			},
-			2: {
-				title: "Hidden Gems: Location Scouting Beyond Marrakech",
-				excerpt: "Discover lesser-known but equally stunning filming locations that Morocco has to offer, from the Atlas mountains to coastal villages.",
+			"iconic-locations": {
+				title: "From Merzouga’s Dunes to Chefchaouen’s Streets: Our Iconic Filming Locations",
+				excerpt:
+					"Morocco is a character in its own right. Explore with us some of the most iconic locations that have served as backdrops for memorable productions, offering extraordinary visual versatility.",
+				fullText:
+					"Every location in Morocco tells a story. The endless dunes of **Merzouga** are perfect for desert epics and sci-fi scenes. The dreamlike blue streets of **Chefchaouen**, nestled in the Rif Mountains, create a magical atmosphere ideal for fairy tales or intimate dramas. The bustling medina of **Marrakech** offers a labyrinth of colors, sounds, and textures, while **Ouarzazate**, the gateway to the desert, hosts world-renowned studios and kasbahs that have welcomed countless blockbusters. Lastly, the wild coast of **Dakhla**, where the desert meets the ocean, provides a unique and spectacular landscape.",
 				category: "Locations",
 				date: "September 28, 2023",
 			},
-			3: {
-				title: "Navigating Drone Permits: A Filmmaker's Guide",
-				excerpt: "Everything you need to know about getting the necessary permissions for spectacular aerial shots in Morocco.",
-				category: "Technical",
+			"a-to-z-support": {
+				title: "How ARTLY PRODUCTION Supports International Productions from A to Z",
+				excerpt:
+					"Hosting a foreign production is more than just a service; it's a partnership. Discover our comprehensive process, designed to ensure a smooth and successful filming experience in Morocco.",
+				fullText:
+					"Our support begins from the very first contact. We start by analyzing your script to propose a **preliminary budget** and an optimized work plan. Next, our **location scouting** team presents the best locations that match your vision. We handle all **administrative procedures**, including filming and drone permits. We assemble the best local **technical and artistic crews** and manage all **logistics**: transportation, accommodation, catering. On set, our coordinators ensure the smooth running of operations. We are your dedicated partner, from pre-production to final delivery.",
+				category: "Services",
+				date: "September 12, 2023",
+			},
+			"case-study-desert": {
+				title: "Case Study: Shooting a Documentary in the Moroccan Desert",
+				excerpt:
+					"The desert is an environment as beautiful as it is demanding. Through a case study, we share the logistical challenges and creative solutions for successfully conducting a shoot in the Sahara.",
+				fullText:
+					"For a recent documentary, our mission was to film nomadic life for three weeks in remote areas. The first challenge was **logistics**. We set up a mobile base camp with 4x4 vehicles to transport the crew and sensitive equipment. **Managing extreme conditions**, with fluctuating temperatures, required adapted shooting schedules, mainly at dawn and dusk. **Protecting the equipment** from fine sand was crucial, using specific covers for cameras and lenses. Finally, **collaboration with local communities** was essential, not only for authenticity but also for security and logistical support. This project illustrates our ability to turn the desert's challenges into a successful and unforgettable production experience.",
+				category: "Case Study",
 				date: "September 5, 2023",
 			},
 		},

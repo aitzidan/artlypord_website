@@ -264,7 +264,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			card.innerHTML = `
                 <div class="blog-card">
                     <div class="blog-card-image">
-                        <img src="https://picsum.photos/seed/blog${key}/600/400" alt="${post.title}">
+                        <img src="https://picsum.photos/seed/blog-${key}/600/400" alt="${post.title}">
                     </div>
                     <div class="blog-card-content">
                         <div class="blog-card-meta">
@@ -272,14 +272,35 @@ document.addEventListener("DOMContentLoaded", () => {
                             <span>${post.date}</span>
                         </div>
                         <h3>${post.title}</h3>
-                        <p>${post.excerpt}</p>
-                        <a href="#" class="blog-card-readmore">${getTranslation("blogPage.readMore")} &rarr;</a>
+                        <p class="blog-card-excerpt">${post.excerpt}</p>
+                        <div class="blog-card-full-text">
+                            <p>${post.fullText}</p>
+                        </div>
+                        <button class="blog-card-readmore">${getTranslation("blogPage.readMore")} &rarr;</button>
                     </div>
                 </div>
             `;
 			container.appendChild(card);
 		});
+		initBlogAccordion();
 		initScrollAnimations();
+	};
+
+	const initBlogAccordion = () => {
+		document.querySelectorAll(".blog-card-readmore").forEach((button) => {
+			button.addEventListener("click", () => {
+				const card = button.closest(".blog-card");
+				const isOpen = card.classList.contains("is-open");
+
+				card.classList.toggle("is-open");
+
+				if (!isOpen) {
+					button.innerHTML = `${getTranslation("blogPage.readLess")} &larr;`;
+				} else {
+					button.innerHTML = `${getTranslation("blogPage.readMore")} &rarr;`;
+				}
+			});
+		});
 	};
 
 	const initContactForm = () => {

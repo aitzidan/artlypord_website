@@ -881,22 +881,26 @@ body.mobile-nav-open .mobile-nav {
 .blog-card {
 	display: flex;
 	flex-direction: column;
-	height: 100%;
 	background: var(--color-light-dark);
 	border-radius: 0.5rem;
 	overflow: hidden;
-	cursor: pointer;
+	border-bottom: 3px solid transparent;
+	box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -2px rgba(0, 0, 0, 0.2);
+	transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
+
+.blog-card:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -4px rgba(0, 0, 0, 0.3);
+	border-bottom-color: var(--color-primary);
+}
+
 .blog-card-image {
 	overflow: hidden;
 }
 .blog-card img {
-	height: 220px;
+	height: 200px;
 	object-fit: cover;
-	transition: transform 0.3s ease;
-}
-.blog-card:hover img {
-	transform: scale(1.05);
 }
 .blog-card-content {
 	padding: 1.5rem;
@@ -912,17 +916,43 @@ body.mobile-nav-open .mobile-nav {
 	margin-bottom: 0.5rem;
 }
 .blog-card-content h3 {
-	margin-bottom: 0.5rem;
-	flex-grow: 1;
+	margin-bottom: 1rem;
 	transition: color 0.3s ease;
+	font-size: 1.25rem;
 }
 .blog-card:hover h3 {
 	color: var(--color-primary);
 }
+.blog-card-excerpt {
+	flex-grow: 1;
+	font-size: 0.9rem;
+}
+.blog-card-full-text {
+	max-height: 0;
+	opacity: 0;
+	overflow: hidden;
+	transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out, margin-top 0.5s ease-in-out;
+	font-size: 0.9rem;
+}
+.blog-card.is-open .blog-card-full-text {
+	max-height: 1000px; /* Large enough to not clip content */
+	opacity: 1;
+	margin-top: 1rem;
+}
+
 .blog-card-readmore {
 	align-self: flex-start;
-	margin-top: auto;
+	margin-top: 1rem;
 	font-weight: 600;
+	background: none;
+	border: none;
+	color: var(--color-primary);
+	cursor: pointer;
+	padding: 0;
+	transition: color 0.3s ease;
+}
+.blog-card-readmore:hover {
+	color: #ffc75f;
 }
 
 /* --- Contact Page --- */
